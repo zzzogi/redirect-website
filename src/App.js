@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
       window.location.href = TARGET_URL;
-    }, 30000);
+    }, 5000);
 
     return () => clearTimeout(redirectTimer);
   }, []);
