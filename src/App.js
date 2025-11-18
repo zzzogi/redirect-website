@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.css"; // Import CSS riêng cho animation và responsive
 
 // CẤU HÌNH
-const TARGET_URL = "https://chungbaoxmphuong.netlify.app/"; // ĐỔI THÀNH URL TRANG ĐÍCH CỦA BẠN
+const TARGET_URL = "https://baophuong.netlify.app/"; // ĐỔI THÀNH URL TRANG ĐÍCH CỦA BẠN
 const LOGO_PATH = "/logo.png";
 
 function App() {
