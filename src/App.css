@@ -36,3 +36,100 @@
     transform: rotate(360deg);
   }
 }
+
+/* Responsive Background */
+.redirect-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../public/background.jpg"); /* Desktop default */
+  transition: background-image 0.5s ease;
+}
+
+@media (max-width: 796px) {
+  .redirect-container {
+    background-image: url("../public/background-tablet.jpg"); /* Mobile image */
+  }
+  .logo {
+    background-color: rgba(0, 0, 0, 0.336);
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .redirect-container {
+    background-image: url("../public/background-mobile.jpg"); /* Mobile image */
+  }
+}
+
+/* Logo Styling */
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+/* Text Animations */
+.text {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dấu ... hiệu ứng typing */
+.dots {
+  display: inline-block;
+  width: 24px;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.dots::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  animation: typing 1.5s infinite step-start;
+}
+
+@keyframes typing {
+  0%,
+  20% {
+    content: "";
+  }
+  40% {
+    content: ".";
+  }
+  60% {
+    content: "..";
+  }
+  80%,
+  100% {
+    content: "...";
+  }
+}
